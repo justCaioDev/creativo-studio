@@ -1,0 +1,740 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth !important;
+}
+
+:root {
+    --primary-text: #333333;
+    --secundary-color: #FFFFFF;
+
+    --highlight-color: #00AACC;
+    --secundary-highlight: #FF9900;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+@keyframes screen-loop {
+    0% {
+        width: 300px;
+        height: 150px;
+    }
+    45% {
+        width: 300px;
+        height: 150px;
+    }
+    50% {
+        width: 250px;
+        height: 150px;
+    }
+    85% {
+        width: 250px;
+        height: 150px;
+    }
+    90% {
+        width: 150px;
+        height: 300px;
+    }
+    100% {
+        width: 150px;
+        height: 300px;
+    }
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 99;
+}
+
+header .header-mobile-menu, .header-mobile-btn {
+    display: none;
+}
+
+header #mobile-btn {
+    display: none;
+}
+
+header .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100%;
+    max-width: 1200px;
+    height: 100px;
+    margin: auto;
+    color: var(--primary-text);
+}
+
+header .active {
+    border-bottom: 2px solid var(--secundary-highlight);
+}
+
+header .header-logo {
+    font-family: 'Playfair Display', sans-serif;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+header ul a {
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px;
+    color: var(--primary-text);
+    transition: color .3s;
+}
+
+header ul a:hover {
+    color: var(--secundary-highlight);
+}
+
+header .header-button {
+    font-size: 18px;
+    padding: 15px 40px;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--primary-text);
+    color: var(--secundary-color);
+    cursor: pointer;
+    transition: all .3s;
+}
+
+header .header-button:hover {
+    background-color: var(--secundary-highlight);
+    padding: 15px 60px;
+}
+
+main .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(/assets/banner-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+main .banner .banner-title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 64px;
+    opacity: .8;
+    color: var(--secundary-color);
+}
+
+main .banner .banner-description {
+    font-size: 24px;
+    opacity: .8;
+    color: var(--secundary-color);
+}
+
+main .welcome {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-block: 100px;
+    color: var(--primary-text);
+}
+
+main .welcome-title {
+    font-size: 64px;
+    margin-bottom: 40px;
+}
+
+main .welcome-title span {
+    color: var(--secundary-highlight);
+}
+
+main .welcome-flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+main .welcome-description {
+    width: 50%;
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 10px;
+    padding-inline: 5px;
+    
+}
+
+main .welcome-screen-loop {
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    border: 2px solid var(--primary-text);
+    animation: screen-loop 10s infinite alternate ease-in-out;
+    background-image: url(/assets/image8.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .our-services {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-block: 150px;
+    color: var(--primary-text);
+}
+
+main .services-title {
+    font-size: 64px;
+    margin-bottom: 40px;
+    font-family: 'Playfair Display', sans-serif;
+    text-align: center;
+}
+
+main .services {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    column-gap: 40px;
+    width: 100%;
+    
+}
+
+main .service {
+    text-align: center;
+    padding: 40px 10px;
+    border-radius: 5px;
+    transition: all .3s ease-in-out;
+}
+
+main .service:hover {
+    scale: 110%;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.315);
+}
+
+main .service-title {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--secundary-highlight);
+    margin-bottom: 20px;
+}
+
+main .service-description {
+    font-size: 20px;
+    text-align: justify;
+}
+
+main .portfolio {
+    width: 100%;
+    margin: auto;
+    margin-block: 200px;
+    background-color: var(--primary-text);
+    padding-top: 25px;
+}
+
+main .portfolio-title {
+    font-family: 'Playfair Display', sans-serif;
+    text-align: center;
+    font-size: 64px;
+    color: var(--secundary-highlight);
+}
+
+main .portfolio-description {
+    font-size: 20px;
+    text-align: center;
+    color: var(--secundary-color);
+    margin-bottom: 40px;
+}
+
+main .works {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    /* grid-template-rows: auto; */
+}
+
+main .work {
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: grayscale(.5);
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+main .work:hover  {
+    filter: grayscale(0);
+    padding: 20px;
+}
+
+main .about-us-bg {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-block: 40px;
+}
+
+main .about-us-container {
+    display: grid;
+    grid-template-areas: 
+        "about-us about-us"
+        "our-mission our-approach"
+        "our-expertise our-expertise";
+    row-gap: 20px;
+    column-gap: 30px;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 100px;
+    opacity: .9;
+    color: var(--secundary-color);
+}
+
+main .about-us {
+    grid-area: about-us;
+    transition: scale .3s ease-out;
+}
+
+main .about-us:hover, .our-approach:hover, .our-mission:hover, .our-expertise:hover {
+    scale: 105%;
+}
+
+main .about-title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 64px;
+    margin-bottom: 20px;
+    color: var(--secundary-highlight);
+}
+
+main .our-mission {
+    grid-area: our-mission;
+    transition: scale .3s ease-in-out;
+}
+
+main .our-mission-title, .our-approach-title, .our-expertise-title {
+    font-family: 'Playfair Display', sans-serif;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: var(--secundary-highlight);
+}
+
+main .our-mission-description, .our-approach-description, .our-expertise-description, .about-description {
+    font-size: 20px;
+    text-align: justify;
+    text-indent: 15px;
+    margin-bottom: 20px;
+}
+
+main .our-approach {
+    grid-area: our-approach;
+    transition: scale .3s ease-in-out;
+}
+
+main .our-expertise {
+    grid-area: our-expertise;
+    text-align: center;
+    transition: scale .3s ease-in-out;
+}
+
+
+
+footer {
+    background-image: linear-gradient(45deg, rgb(19, 19, 19), var(--primary-text));
+    padding-block: 40px;
+}
+
+footer .footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    color: var(--secundary-color);
+}
+
+footer .contact-title {
+    font-size: 64px;
+}
+
+footer .contact-number, .contact-address {
+    font-size: 24px;
+}
+
+footer .contact-title, .contact-number, .contact-address {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+footer .contact-form {
+    display: grid;
+    grid-template-areas: 
+        "name name"
+        "email phone"
+        "subject message"
+        "submit submit";
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+footer .name-form, .email-form, .phone-form, .subject-form, .message-form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .contact-form label {
+    font-size: 24px;
+    padding: 5px;
+}
+
+footer .contact-form input {
+    font-size: 20px;
+    height: 50px;
+    padding-inline: 20px;
+    border: none;
+    color: var(--primary-text);
+}
+
+footer .contact-form input:focus {
+    border: none;
+    outline: none;
+}
+
+footer .name-form {
+    grid-area: name;
+}
+
+footer .email-form {
+    grid-area: email;
+}
+
+footer .phone-form {
+    grid-area: phone;
+}
+
+footer .subject-form {
+    grid-area: subject;
+}
+
+footer .message-form {
+    grid-area: message;
+}
+
+footer .submit-form {
+    grid-area: submit;
+    width: fit-content;
+    font-size: 18px;
+    font-weight: 500;
+    margin: auto;
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--secundary-highlight);
+    color: var(--secundary-color);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+footer .submit-form:hover {
+    padding: 15px 40px;
+    background-color: var(--highlight-color);
+}
+
+footer .footer-infos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    margin-top: 200px;
+    border-top: 2px solid var(--secundary-color);
+}
+
+footer .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+}
+
+footer .footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+footer .social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+footer .footer-pages ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    list-style: none;
+}
+
+footer .footer-pages a {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: var(--secundary-color);
+    transition: color .3s;
+}
+
+
+footer .footer-pages a:hover {
+    color: var(--highlight-color);
+}
+
+footer .footer-logo {
+    font-size: 24px;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+aside {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+}
+
+aside .whatsapp-btn {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    opacity: .8;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+aside .whatsapp-btn:hover {
+    width: 90px;
+    height: 90px;
+    opacity: 1;
+}
+
+@media screen and (max-width: 1000px) {
+    header {
+        height: fit-content;
+    }
+
+    header .header-mobile-menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        padding-top: 40px;
+        background-color: black;
+        opacity: .8;
+    }
+
+    header .header-mobile-btn {
+        display: none;
+        width: 100%;
+        height: 60px;
+        font-size: 24px;
+        font-weight: 600;
+        border: none;
+        background-color: var(--secundary-highlight);
+        color: var(--primary-text);
+        cursor: pointer;
+    }
+
+    header ul li {
+        width: 100%;
+        height: 50px;
+        text-align: center;
+
+        border-bottom: 1px solid var(--secundary-color);
+    }
+    
+    header ul a {
+        font-weight: 400;
+        color: var(--secundary-color);
+    }
+    
+    header .header-container {
+        padding-inline: 20px;
+    }
+    
+    header .header-navmenu, .header-button {
+        display: none;
+    }
+
+    header #mobile-btn {
+        display: block;
+        font-size: 28px;
+    }
+
+    main .welcome {
+        padding-inline: 20px;
+    }
+
+    main .our-services {
+        padding-inline: 20px;
+    }
+
+    main .about-us-container {
+        padding-inline: 20px;
+    }
+
+    footer .contact-form {
+        padding-inline: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main .welcome-flex {
+        gap: 50px;
+        padding-right: 50px;
+    }
+
+    main .services {
+        column-gap: 15px;
+    }
+
+    main .service-description {
+        text-align: center;
+    }
+
+    main .about-us-container {
+        line-height: 30px;
+    }
+
+    footer .footer-infos {
+        padding-top: 40px;
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main .welcome-flex {
+        padding-right: 0;
+    }
+
+    main .services {
+        column-gap: 10px;
+    }
+
+    main .service {
+        padding: 0;
+    }
+
+    main .about-us-container {
+        grid-template-areas: 
+        "about-us about-us"
+        "our-mission our-mission"
+        "our-approach our-approach"
+        "our-expertise our-expertise";
+        row-gap: 50px;
+    }
+
+    main .about-title, .our-approach-title, .our-expertise-title, main .our-mission-title {
+        font-size: 30px;
+        color: var(--secundary-highlight);
+        text-align: center;
+    }
+
+    main .about-description, .our-approach-description, .our-expertise-description, main .our-mission-description {
+        font-size: 18px;
+        color: var(--secundary-color);
+    }
+
+    footer .contact-title {
+        font-size: 28px;
+    }
+
+    footer .contact-address, footer .contact-number {
+        font-size: 18px;
+    }
+
+    footer .contact-form {
+        grid-template-areas:
+            "name name"
+            "email email"
+            "phone phone"
+            "subject subject"
+            "message message"
+            "submit submit";
+    }
+
+    footer .contact-form label {
+        font-size: 20px;
+    }
+
+    aside .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    main .banner {
+        padding-inline: 20px;
+    }
+
+    main .banner .banner-title {
+        font-size: 40px;
+        opacity: .9;
+    }
+    
+    main .welcome-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .welcome-title, main .services-title, main .portfolio-title {
+        font-size: 38px;
+    }
+    
+    main .service-description, main .portfolio-description, main .banner .banner-description, main .welcome-description {
+        font-size: 18px;
+    }
+
+    main .welcome-description {
+        width: 100%;
+    }
+
+    main .services {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    main .service-title, header .header-logo {
+        font-size: 24px;
+    }
+
+    main .works {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    footer .footer-infos {
+        margin-top: 100px;
+    }
+
+}
