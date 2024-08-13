@@ -1,39 +1,39 @@
 const works = [
     {
-        path: '../assets/image1.jpg'
+        path: './assets/image1.jpg'
     },
     {
-        path: '../assets/image2.jpg'
+        path: './assets/image2.jpg'
     },
     {
-        path: '../assets/image3.jpg'
+        path: './assets/image3.jpg'
     },
     {
-        path: '../assets/image4.jpg'
+        path: './assets/image4.jpg'
     },
     {
-        path: '../assets/image5.jpg'
+        path: './assets/image5.jpg'
     },
     {
-        path: '../assets/image6.jpg'
+        path: './assets/image6.jpg'
     },
     {
-        path: '../assets/image7.jpg'
+        path: './assets/image7.jpg'
     },
     {
-        path: '../assets/image8.jpg'
+        path: './assets/image8.jpg'
     },
     {
-        path: '../assets/image9.jpg'
+        path: './assets/image9.jpg'
     },
     {
-        path: '../assets/image10.jpg'
+        path: './assets/image10.jpg'
     },
     {
-        path: '../assets/image11.jpg'
+        path: './assets/image11.jpg'
     },
     {
-        path: '../assets/image12.jpg'
+        path: './assets/image12.jpg'
     }
 ]
 const worksGrid = document.getElementById('works')
